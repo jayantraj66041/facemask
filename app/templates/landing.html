@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% block title %}Login{% endblock title %}
+
+{% block content %}
+
+<nav class="navbar navbar-extend-lg navbar-dark bg-primary">
+    <div class="container">
+        <a href="" class="navbar-brand">FaceMask</a>
+    </div>
+</nav>
+
+<div class="container mt-4">
+    <div class="row">
+        <div class="col-lg-6 mx-auto">
+            <ul class="nav nav-tabs" id="myTab" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">LogIn</button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">SignUp</button>
+                </li>
+              </ul>
+              <div class="tab-content" id="myTabContent">
+                <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+                    <form action="" class="my-3">
+                        <div class="mb-2">
+                            <label for="username" class="text-muted">Username</label>
+                            <input type="text" name="username" id="username" class="form-control form-control-lg">
+                        </div>
+                        <div class="mb-2">
+                            <label for="password" class="text-muted">Password</label>
+                            <input type="password" name="password" id="password" class="form-control form-control-lg">
+                        </div>
+                        <div class="mb-2">
+                            <button type="submit" class="btn btn-primary btn-lg"><i class="bi bi-lock"></i> LogIn</button>
+                        </div>
+                    </form>
+                </div>
+                <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+                    <form action="" class="my-3">
+                        <div class="row">
+                            <div class="mb-2 col-6">
+                                <label for="fname" class="text-muted">First name</label>
+                                <input type="text" name="fname" id="fname" class="form-control form-control-lg">
+                            </div>
+                            <div class="mb-2 col-6">
+                                <label for="lname" class="text-muted">Last name</label>
+                                <input type="text" name="lname" id="lname" class="form-control form-control-lg">
+                            </div>
+                        </div>
+                        <div class="mb-2">
+                            <label for="username" class="text-muted">Username</label>
+                            <input type="text" name="username" id="username" class="form-control form-control-lg">
+                        </div>
+                        <div class="mb-2">
+                            <label for="email" class="text-muted">Email</label>
+                            <input type="email" name="email" id="email" class="form-control form-control-lg">
+                        </div>
+                        <div class="row">
+                            <div class="mb-2 col-6">
+                                <label for="password" class="text-muted">Password</label>
+                                <input type="password" name="password" id="password" class="form-control form-control-lg">
+                            </div>
+                            <div class="mb-2 col-6">
+                                <label for="re-password" class="text-muted">Re Password</label>
+                                <input type="password" name="re-password" id="re-password" class="form-control form-control-lg">
+                            </div>
+                        </div>
+                        <div class="mb-2">
+                            <button type="submit" class="btn btn-primary btn-lg"><i class="bi bi-arrow-clockwise"></i> SignUp</button>
+                        </div>
+                    </form>
+                </div>
+              </div>
+        </div>
+    </div>
+</div>
+
+{% endblock content %}
