@@ -23,7 +23,8 @@
               </ul>
               <div class="tab-content" id="myTabContent">
                 <div class="tab-pane fade show active" id="login-tab-pane" role="tabpanel" aria-labelledby="login-tab" tabindex="0">
-                    <form action="" class="my-3">
+                    <form action="{% url 'login' %}" method="POST" class="my-3">
+                        {% csrf_token %}
                         <div class="mb-2">
                             <label for="username" class="text-muted">Username<strong class="text-danger fw-bold">*</strong></label>
                             <input type="text" name="username" id="username" class="form-control form-control-lg">
@@ -39,7 +40,8 @@
                 </div>
 
                 <div class="tab-pane fade" id="signup-tab-pane" role="tabpanel" aria-labelledby="signup-tab" tabindex="0">
-                    <form action="" class="my-3">
+                    <form action="{% url 'landing-page' %}" class="my-3" method="post">
+                        {% csrf_token %}
                         <div class="row">
                             <div class="mb-2 col-6">
                                 <label for="fname" class="text-muted">First name<strong class="text-danger fw-bold">*</strong></label>
